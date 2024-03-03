@@ -1,0 +1,130 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Primary-Soft-blue: hsl(215, 51%, 70%);
+  --Primary-Cyan: hsl(178, 100%, 50%);
+
+  --Neutral-Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Neutral-Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Neutral-Very-dark-blue-line: hsl(215, 32%, 27%);
+  --Neutral-White: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: var(--Neutral-Very-dark-blue-main-BG);
+  /* color: hsla(0, 0%, 100%, 0.6); */
+  color: hsl(215, 21%, 55%);
+  /* padding: 1.25rem; */
+}
+ul,
+li {
+  list-style: none;
+}
+p {
+  font-weight: 300;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  background-color: var(--Neutral-Very-dark-blue-card-BG);
+  padding: 1.25rem;
+  border-radius: 1rem;
+}
+.container h1 {
+  color: var(--Neutral-White);
+  margin: 1rem 0;
+}
+.container h1:hover {
+  color: var(--Primary-Cyan);
+  cursor: pointer;
+}
+.container .main-image img {
+  /* width: 100%; */
+  border-radius: 0.7rem;
+}
+.container .main-image {
+  position: relative;
+}
+.container .main-image div {
+  position: absolute;
+  background-color: hsla(178, 100%, 50%, 0.6);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  border-radius: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.container .main-image div:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.container .main-image div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--Neutral-Very-dark-blue-line);
+}
+.container ul li {
+  display: flex;
+  align-items: center;
+}
+.container ul li:first-child {
+  color: var(--Primary-Cyan);
+}
+.container ul li img {
+  margin-right: 0.5rem;
+}
+.container .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 1rem;
+}
+.container .avatar img {
+  border: 2px solid var(--Neutral-White);
+  border-radius: 50%;
+  width: 10%;
+  margin-right: 1rem;
+  /* width: 100%; */
+  /* background-color: red; */
+}
+.container .avatar p span {
+  color: var(--Neutral-White);
+  font-weight: 400;
+}
+.container .avatar p span:hover {
+  color: var(--Primary-Cyan);
+  cursor: pointer;
+}
+.attribution {
+  margin-top: 1rem;
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 500px) {
+  .container {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
